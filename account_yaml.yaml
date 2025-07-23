@@ -24,6 +24,9 @@ collection:
           description: Returns a list of all accounts with basic details.
           sortKey: -1753185923956
         method: GET
+        scripts:
+          preRequest: ""
+          afterResponse: ""
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -52,10 +55,10 @@ collection:
             }
         headers:
           - name: Content-Type
-            disabled: false
             value: application/json
         scripts:
           preRequest: ""
+          afterResponse: ""
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -110,6 +113,7 @@ collection:
               const responseBody = JSON.parse(response.body.toString());
               insomnia.environment.set('accountId', responseBody.account_id);
             }
+          afterResponse: ""
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -136,7 +140,6 @@ collection:
             }
         headers:
           - name: Content-Type
-            disabled: false
             value: application/json
         scripts:
           preRequest: >-
@@ -174,6 +177,7 @@ collection:
               const responseBody = JSON.parse(response.body.toString());
               insomnia.environment.set('accountId', responseBody.account_id);
             }
+          afterResponse: ""
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -200,7 +204,6 @@ collection:
             }
         headers:
           - name: Content-Type
-            disabled: false
             value: application/json
         scripts:
           preRequest: >-
@@ -238,6 +241,7 @@ collection:
               const responseBody = JSON.parse(response.body.toString());
               insomnia.environment.set('accountId', responseBody.account_id);
             }
+          afterResponse: ""
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -246,6 +250,9 @@ collection:
             send: true
             store: true
           rebuildPath: true
+    scripts:
+      afterResponse: ""
+      preRequest: ""
   - name: health
     meta:
       id: fld_5af7b57566ce42d2b53d126df11c8385
@@ -264,6 +271,9 @@ collection:
           description: Returns the API's health status
           sortKey: -1753185923950
         method: GET
+        scripts:
+          preRequest: ""
+          afterResponse: ""
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -282,6 +292,9 @@ collection:
           description: Returns the API's health status without body
           sortKey: -1753185923953
         method: HEAD
+        scripts:
+          preRequest: ""
+          afterResponse: ""
         settings:
           renderRequestBody: true
           encodeUrl: true
@@ -290,6 +303,9 @@ collection:
             send: true
             store: true
           rebuildPath: true
+    scripts:
+      afterResponse: ""
+      preRequest: ""
 cookieJar:
   name: Default Jar
   meta:
