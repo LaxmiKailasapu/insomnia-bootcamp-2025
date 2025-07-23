@@ -771,3 +771,52 @@ spec:
     id: spc_249c6b6981da437896b247e186c9fb6e
     created: 1753183676204
     modified: 1753184586807
+testSuites:
+  - name: create account
+    meta:
+      id: uts_c55b2b99cd0749bd9a8d935197664907
+      created: 1753245970449
+      modified: 1753246004345
+      sortKey: -1753245970449
+    tests:
+      - name: Credit accounts 200
+        meta:
+          id: ut_c9b44e973f134ae39166d9d3da137e0c
+          created: 1753246005186
+          modified: 1753246894645
+          sortKey: -1753246173517.3125
+        requestId: req_3a2c8a7c883640149806d42bca431057
+        code: const response = await
+          insomnia.send();expect(response.status).to.equal(200);const account =
+          JSON.parse(response.data);expect(account).to.have.property('balance').that.is.a('number');
+      - name: Returns 200
+        meta:
+          id: ut_4f865ea0291541bdae221f502305a4ba
+          created: 1753246186703
+          modified: 1753246903030
+          sortKey: -1753246186703
+        requestId: req_fba8da68e0ce4817ac3a607771b4e0fe
+        code: |-
+          const response1 = await insomnia.send();
+          expect(response1.status).to.equal(200);
+      - name: Returns 200
+        meta:
+          id: ut_09d8403a4f0f48f5b9c8a18d3700dc66
+          created: 1753246792446
+          modified: 1753247069618
+          sortKey: -1753246792446
+        requestId: req_c0fac4bd9b2d4bf287932fcb86a4f773
+        code: const response = await
+          insomnia.send();expect(response.status).to.equal(200);const body =
+          response.data;expect(body).to.be.a('string');expect(body.toLowerCase()).to.include('accounts
+          api');
+      - name: Returns 200
+        meta:
+          id: ut_62373c684fa1464e8ed41958294df8c1
+          created: 1753246870291
+          modified: 1753247090494
+          sortKey: -1753246870291
+        requestId: req_258c8e30595c451d9c1d5dda7225c000
+        code: |-
+          const response1 = await insomnia.send();
+          expect(response1.status).to.equal(200);
